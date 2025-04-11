@@ -32,7 +32,7 @@ const CheckoutForm = () => {
   }, []);
   console.log('activedonation', donation);
   const [values, setValues] = useState({
-    donationAmount: 0,
+    donationAmount: 50,
   });
 
   const handleChange = (e) => {
