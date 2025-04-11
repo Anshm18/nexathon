@@ -10,10 +10,10 @@ import Footer from '../../../shared/footer/Footer';
 
 const DonationCampaignDetails = () => {
     const campdetails=useLoaderData();
+    console.log('campdet',campdetails);
     const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway_PK);
 
     const {image,shortdesp,longdesp,last_donation_date,max_donation_limit,pause}=campdetails;
-    console.log('campdet',campdetails);
     return (
         <div>
           <Navbar></Navbar>

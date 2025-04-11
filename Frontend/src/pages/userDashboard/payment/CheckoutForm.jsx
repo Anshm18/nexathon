@@ -17,6 +17,7 @@ const CheckoutForm = () => {
   const [donation, setDonation] = useState(null);
   const [loading, setLoading] = useState(true); // Add loading state
   const { id } = useParams();
+
   useEffect(() => {
     fetch(`http://localhost:5007/adddonationcamp`)
       .then(response => response.json())
@@ -30,6 +31,7 @@ const CheckoutForm = () => {
         setLoading(false); // Set loading to false on error
       });
   }, []);
+
   console.log('activedonation', donation);
   const [values, setValues] = useState({
     donationAmount: 50,
